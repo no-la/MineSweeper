@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=540></canvas>
+      <canvas id="unity-canvas" width=960 height=600></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -22,20 +22,16 @@
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <!-- <div id="unity-build-title">MineSweeperForWebGL</div> -->
+        <div id="unity-build-title">MineSweeperForWebGL</div>
       </div>
-    </div>
-    <div>
-      <p>
-      </p>
     </div>
     <script>
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/WebGL.loader.js";
+      var loaderUrl = buildUrl + "/WebGL2.loader.js";
       var config = {
-        dataUrl: buildUrl + "/WebGL.data.br",
-        frameworkUrl: buildUrl + "/WebGL.framework.js.br",
-        codeUrl: buildUrl + "/WebGL.wasm.br",
+        dataUrl: buildUrl + "/WebGL2.data.unityweb",
+        frameworkUrl: buildUrl + "/WebGL2.framework.js.unityweb",
+        codeUrl: buildUrl + "/WebGL2.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "MineSweeperForWebGL",
@@ -67,7 +63,7 @@
         }, 5000);
       } else {
         canvas.style.width = "960px";
-        canvas.style.height = "540px";
+        canvas.style.height = "600px";
       }
       loadingBar.style.display = "block";
 
